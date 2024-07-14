@@ -1,0 +1,15 @@
+streamlit
+numpy
+pandas
+openpyxl
+osmnx
+networkx
+scikit-learn
+matplotlib
+streamlit_folium
+folium
+plotly.express
+seaborn
+plotly
+st-pages
+scipy
