@@ -1,97 +1,191 @@
-# 🚢 Adios Team First_Project (팀 프로젝트)
+# Busan Port Crew Service & Marketing Insight Analysis
 
-![image](https://github.com/Kshi0219/Adios/assets/149676714/0505755b-91f5-4f97-a42b-860c0aadd829)
+![Project Cover](https://github.com/Kshi0219/Adios/assets/149676714/0505755b-91f5-4f97-a42b-860c0aadd829)
 
-## 🎯 부산항 입항 외국인 선원 대상 마케팅 인사이트 제공
-- 선용품 구매플랫폼 구축을 위한 데이터 분석 및 시각화
-- 외국인 선원 체류 시간별 관광코스 정보 제공
+> Korean version: [README_Kver.md](./README_Kver.md)
 
-### 📅 프로젝트 기간
-- 2024/02/27 ~ 03/05
+## Overview
 
-### 👥 R&R (Role and Responsibility)
-- 데이터 수집
-- 데이터 가공
-- 시각화(워드클라우드, 공실데이터)
-- 상관분석
+This team project analyzed port logistics, foreign seafarer stay duration, marine supply demand, vacant commercial spaces, and nearby tourism resources around Busan Port. The goal was to provide data-driven insights for building a marine supplies purchasing platform and a stay-duration-based tourism recommendation service for foreign seafarers entering Busan Port.
 
-### 🛠️ 사용언어 및 라이브러리
-- **언어**: Python
-- **라이브러리**: [requirements.txt](requirements.txt)
+The project was completed during a data analysis bootcamp and focused on the full data analysis workflow: data collection, preprocessing, exploratory analysis, correlation analysis, web crawling, geospatial visualization, and service-oriented insight generation.
 
-### 🗂️ 총활용 데이터
-- **링크**: [데이터별 링크](데이터별%20링크.xlsx)
+## Project Period
 
-## 🌟 서비스 기능
-1. 부산항만공사에게 선용품 구매플랫폼 구축을 위한 데이터 제공
-2. 체류 시간별 부산 관광코스 정보 제공 서비스
+- **Duration:** February 27, 2024 - March 5, 2024
+- **Type:** Team project
+- **Team:** Adios
 
-## 🎯 서비스 타겟
-1. 부산항만공사
-2. 외국인 선원
+## My Role
 
-## 📊 프로젝트 수행 내용
+I contributed mainly to the following areas:
 
-### 1️⃣ 선용품 구매플랫폼 구축(1): 물동량과 체류시간의 연관분석을 통한 선용품 구매플랫폼 서비스의 니즈 파악
-- **활용 데이터**:
-  1. [부산항 물동량 추이](https://www.busanpa.com/kor/Contents.do?mCode=MN0931)
-  2. [체류시간](https://www.pnitl.com/infoservice/vessel/vslScheduleList.jsp)
-- **활용 용도**: 상관관계 분석
-- **코드 링크**: [물동량-체류시간 상관관계 분석](상관분석/물동량-체류시간_상관분석_zscore표준화.ipynb)
+- Data collection through public data sources and web crawling
+- Data cleaning and preprocessing
+- Correlation analysis between cargo volume and vessel stay duration
+- Word cloud visualization for preferred marine supply items
+- Geospatial visualization of vacant properties and service-related locations
+- Insight generation for a marine supplies platform and tourism recommendation service
 
-### 2️⃣ 선용품 구매플랫폼 구축(2): 외국인 선호 선용품을 추리기 위한 년도별, 분기별 선호 품목 분석
-- **활용 데이터**: [관세청_전국 및 부산권항 선용품 무역통계](https://www.data.go.kr/data/15060293/fileData.do)
-- **활용 용도**: 선용품 선호 품목 분석 시각화
-- **코드 링크**: [년도별 분기별 선용품 선호 품목 분석](년도별%20분기별%20품목%20분석/년도별%20분기별%20품목별%20분석.ipynb)
+## Key Objectives
 
-### 3️⃣ 선용품 구매플랫폼 구축(3): 외국인 선호 선용품 분석을 통한 워드클라우드 시각화
-- **활용 데이터**: 외국인 선호하는 선용품에 대한 해당 품목 영어로 검색 후, 관련 도메인 사이트 크롤링
-- **활용 용도**: 외국인 선호 선용품 워드클라우드 시각화
-- **코드 링크**:
-  1. [부산 기념품 크롤링&워드클라우드](크롤링&워드클라우드/기념품%20크롤링%20and%20워드클라우드.ipynb)
-  2. [부산 특산 음식 크롤링&워드클라우드](크롤링&워드클라우드/식품%20크롤링%20and%20워드클라우드.ipynb)
+1. **Validate the demand for a marine supplies purchasing platform**  
+   Analyze the relationship between Busan Port cargo volume and foreign vessel stay duration to identify whether increased port activity could support additional services for foreign seafarers.
+
+2. **Identify potential marine supply product categories**  
+   Analyze yearly and quarterly marine supply trade data to identify product categories that could be suitable for a purchasing platform.
+
+3. **Explore foreign seafarer-oriented product preferences**  
+   Crawl English-language web content related to Korean souvenirs and local foods, then visualize frequent keywords using word clouds.
+
+4. **Support logistics and pickup-location planning**  
+   Collect and visualize vacant commercial, office, factory, and land listings located within approximately 10-20 minutes from Busan New Port.
+
+5. **Provide stay-duration-based tourism insights**  
+   Visualize restaurants, accommodations, and tourist attractions within a 10 km radius of Busan New Port to support tourism course recommendations for foreign seafarers.
+
+## Tech Stack
+
+- **Language:** Python
+- **Data Processing:** pandas, numpy, openpyxl
+- **Visualization:** matplotlib, seaborn, plotly, folium, wordcloud
+- **Statistical Analysis:** scipy, scikit-learn
+- **Web Crawling:** Selenium, BeautifulSoup
+- **Geospatial Visualization:** folium, MarkerCluster
+- **Deployment / Demo:** Streamlit
+
+See [`requirements.txt`](requirements.txt) for the package list.
+
+## Data Sources
+
+The project used multiple public and crawled data sources, including:
+
+- Busan Port cargo volume statistics
+- Busan New Port International Terminal vessel schedule and stay-duration data
+- Korea Customs Service marine supplies trade statistics
+- Naver Real Estate listings near Busan New Port
+- Google Maps data for restaurants, accommodations, and tourist attractions
+- English-language web pages related to Korean souvenirs and snacks
+
+A source reference file is available here: [`data-links.xlsx`](data-links.xlsx)
+
+## Main Analysis Workflow
+
+### 1. Correlation Analysis: Cargo Volume vs. Stay Duration
+
+To estimate the potential demand for foreign seafarer services, we analyzed the relationship between Busan Port cargo volume and vessel stay duration.
+
+- **Data used:** Busan Port cargo volume data and vessel stay-duration data
+- **Method:** Correlation analysis and standardized comparison using z-score scaling
+- **Main insight:** Cargo volume and stay duration showed a positive correlation, supporting the need for additional services targeting foreign seafarers.
+
+Notebook: [`correlation-analysis/cargo-volume-stay-duration-correlation-zscore.ipynb`](correlation-analysis/cargo-volume-stay-duration-correlation-zscore.ipynb)
+
+### 2. Yearly and Quarterly Marine Supply Item Analysis
+
+We analyzed marine supply trade statistics by year and quarter to identify frequently traded and potentially preferred product categories.
+
+- **Data used:** Korea Customs Service marine supplies trade statistics
+- **Method:** Yearly and quarterly item-level aggregation and visualization
+- **Output:** Product-category trend charts from 2018 to 2023
+
+Notebook: [`yearly-quarterly-item-analysis/yearly-quarterly-marine-supply-item-analysis.ipynb`](yearly-quarterly-item-analysis/yearly-quarterly-marine-supply-item-analysis.ipynb)
+
+### 3. Web Crawling and Word Cloud Visualization
+
+To understand product preferences from an international user perspective, we crawled English-language content related to Korean souvenirs and local food products.
+
+- **Data used:** Crawled English web articles and product recommendation pages
+- **Method:** Selenium/BeautifulSoup crawling, keyword extraction, and word cloud visualization
+- **Output:** Word clouds for souvenir-related and food-related product keywords
+
+Notebooks:
+
+- [`crawling-wordcloud/souvenir-crawling-wordcloud.ipynb`](crawling-wordcloud/souvenir-crawling-wordcloud.ipynb)
+- [`crawling-wordcloud/food-crawling-wordcloud.ipynb`](crawling-wordcloud/food-crawling-wordcloud.ipynb)
 
 <details>
-  <summary>부산 기념품 워드클라우드</summary>
-  <img src="크롤링&워드클라우드/기념품.png" alt="부산 기념품 워드클라우드">
+  <summary>Souvenir Word Cloud</summary>
+  <img src="crawling-wordcloud/souvenir.png" alt="Souvenir Word Cloud">
 </details>
 
 <details>
-  <summary>부산 특산 음식 워드클라우드</summary>
-  <img src="크롤링&워드클라우드/식품.png" alt="부산 특산 음식 워드클라우드">
+  <summary>Food Word Cloud</summary>
+  <img src="crawling-wordcloud/food.png" alt="Food Word Cloud">
 </details>
 
-### 4️⃣ 선용품 구매플랫폼 구축(4): 선용품 보관창고 위치 분석
-- **활용 데이터**: 네이버 부동산 웹크롤링을 통한 부산신항만 기준으로 10~20분 내 거리에 위치한 상가· 업무· 공장· 토지
-- **활용 용도**: 선용품 보관 및 수령장소 관련한 창고리스트의 시각화
-- **코드 링크**: [공실지도](지도%20시각화/공실지도%20folium%20완성.ipynb)
-- **시각화 html**: [시각화](지도%20시각화/공실지도.html)
+### 4. Vacant Property Map Visualization
 
-### 5️⃣ 외국인 추천 관광 코스: 부산 지역 내 맛집, 관광지, 숙박 지도 시각화
-- **활용 데이터**: 구글맵 크롤링을 통한 부산신항만 기준으로 10km 이내 맛집, 숙박업소, 관광지(평점 4점 이상)
-- **활용 용도**: 선원 체류시간별 관광 코스 추천
-- **코드 링크**: [맛집, 관광지, 숙박 지도 시각화](지도%20시각화/맛집,%20관광지.%20숙박%20지도%20시각화(folium).ipynb)
+We crawled real estate listings near Busan New Port and visualized vacant commercial spaces that could potentially be used as storage or pickup locations for a marine supplies purchasing platform.
 
-## 🔍 중점 사항
-- WBS 상시 확인: 과업별 진도 파악을 통한 기한 내 프로젝트 완성에 주력 [WBS](부산항만공사%20직영%20서비스플랫폼%20구축을%20위한%20데이터분석%20WBS.xlsx)
-- 코드 컨벤션 기반 코딩 주력: 생산성 향상 및 코드 인계간 빠른 의사결정으로 과업 진행 [코드컨벤션](데이터분석_코드컨벤션_0.1.pptx.pdf)
-- 도메인 및 메타데이터 파악: 무역 프로세스와 프로세스 간 발생되는 데이터 의미 파악을 통한 신속한 데이터 수집/가공/시각화
-- 직접 코딩 지향:
-  1. Excel '다운로드' 버튼을 통한 데이터 수집 지양
-  2. Selenium, BeautifulSoup 등을 활용한 직접 코딩 및 전처리를 통한 코딩 스킬 극대화
-- 주 사용자, 즉 고객 입장에서의 서비스/기능 정의 및 구현에 주력
-- 과업별 후 코드 리뷰: 단계별 코드 공유를 통한 효율적인 코딩 스킬 학습 및 적용
+- **Data used:** Naver Real Estate listings around Busan New Port
+- **Method:** Web crawling, address/location preprocessing, and folium map visualization
+- **Output:** Interactive map of vacant commercial, office, factory, and land listings
 
-## 📝 미흡 사항
-- 코드컨벤션 기반의 코딩 습관 부족
-- 서비스가 목적이 아니라 점점 분석이 목적이 되어버리는 상황 발생
+Notebook: [`map-visualization/vacant-property-map-folium.ipynb`](map-visualization/vacant-property-map-folium.ipynb)  
+HTML Output: [`map-visualization/vacant-property-map.html`](map-visualization/vacant-property-map.html)
 
-## 📂 산출물 
-- 🌐 스트림릿: [스트림릿 링크](https://busanportservice.streamlit.app/)
-- 📄 팀 포트폴리오: [팀 포트폴리오](부산항_데이터분석_ver_1.0_완료.pdf)
-- 📊 시각화 자료: [시연영상](Adios_시각화결과산출물.mp4), [물동량 플로우리쉬](플로우리쉬.mp4)
+### 5. Restaurant, Accommodation, and Tourist Attraction Map
 
----
+We collected and visualized highly rated restaurants, accommodations, and tourist attractions within a 10 km radius of Busan New Port.
 
-💬 **회고**: 국비지원부트캠프에 온 지 약 한 달 만에 하는 프로젝트라 긴장되고 주제를 어떤걸 할지 막막했지만 훌륭한 팀원들 덕분에 
-바른 로드맵으로 진행해 와서 막힘없이 진행했던 것 같다. 데이터 전처리와 시각화에 대해서 자신감이 붙었고, 데이터 분석에 대한 흐름을 잘 숙지하게 되었고 파이썬 함수에 대한 응용도도 올라간 짧지만 정말 유익한 시간이었다.
+- **Data used:** Google Maps crawling results
+- **Criteria:** Locations with a rating of 4.0 or higher
+- **Method:** Location-based filtering and folium map visualization
+- **Use case:** Stay-duration-based tourism recommendation for foreign seafarers
+
+Notebook: [`map-visualization/restaurant-tourism-accommodation-map-folium.ipynb`](map-visualization/restaurant-tourism-accommodation-map-folium.ipynb)
+
+## Project Deliverables
+
+- **Streamlit Demo:** [Busan Port Service Demo](https://busanportservice.streamlit.app/)
+- **Team Portfolio Report:** [`busan-port-data-analysis-report.pdf`](busan-port-data-analysis-report.pdf)
+- **Team Presentation:** [`busan-port-data-analysis-presentation.pptx`](busan-port-data-analysis-presentation.pptx)
+- **Visualization Demo Video:** [`adios-visualization-demo.mp4`](adios-visualization-demo.mp4)
+- **Cargo Volume Visualization Video:** [`flourish-cargo-volume.mp4`](flourish-cargo-volume.mp4)
+- **WBS:** [`busan-port-service-platform-wbs.xlsx`](busan-port-service-platform-wbs.xlsx)
+- **Code Convention Guide:** [`data-analysis-code-convention.pdf`](data-analysis-code-convention.pdf)
+
+## Repository Structure
+
+
+```text
+first_project/
+├── README.md
+├── README_Kver.md
+├── requirements.txt
+├── data-links.xlsx
+├── correlation-analysis/
+│   └── cargo-volume-stay-duration-correlation-zscore.ipynb
+├── yearly-quarterly-item-analysis/
+│   ├── yearly-quarterly-marine-supply-item-analysis.ipynb
+│   ├── 2018-quarterly-marine-supply-items.png
+│   ├── 2019-marine-supply-items.png
+│   ├── 2020-marine-supply-items.png
+│   ├── 2021-marine-supply-items.png
+│   ├── 2022-marine-supply-items.png
+│   └── 2023-marine-supply-items.png
+├── crawling-wordcloud/
+│   ├── souvenir-crawling-wordcloud.ipynb
+│   ├── food-crawling-wordcloud.ipynb
+│   ├── souvenir.png
+│   └── food.png
+├── map-visualization/
+│   ├── vacant-property-map-folium.ipynb
+│   ├── vacant-property-map.html
+│   └── restaurant-tourism-accommodation-map-folium.ipynb
+├── busan-port-data-analysis-report.pdf
+├── busan-port-data-analysis-presentation.pptx
+├── data-analysis-code-convention.pdf
+├── busan-port-service-platform-wbs.xlsx
+├── adios-visualization-demo.mp4
+└── flourish-cargo-volume.mp4
+```
+
+## What I Learned
+
+This was one of my first end-to-end data analysis projects during the bootcamp. Through this project, I gained hands-on experience in collecting real-world data, cleaning and transforming datasets, validating a business hypothesis with correlation analysis, and turning analysis outputs into service-oriented insights. I also learned the importance of defining the user and business problem clearly before conducting analysis.
+
+## Retrospective
+
+Although the project was completed within a short period, it helped me understand the overall flow of a data analysis project from planning to insight delivery. One improvement point was that the project gradually became analysis-driven rather than service-driven. In future projects, I would define user scenarios and success metrics earlier so that each analysis step is more directly connected to the final product or service decision.

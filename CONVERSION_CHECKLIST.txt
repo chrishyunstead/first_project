@@ -1,0 +1,8 @@
+Converted project folder: first_project_english
+Meaningful original project files: 24
+Converted project files: 26
+README.md replaced with English version; original Korean README saved as README_Kver.md.
+Excluded only non-portfolio metadata: __MACOSX, .git, .idea, AppleDouble files.
+Korean characters in converted file/folder names: 0
+Metadata dirs remaining: 0
+Missing local README links: 0
